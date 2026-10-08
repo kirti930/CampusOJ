@@ -1,0 +1,343 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────────────────────────
+// ENUMS
+// ─────────────────────────────────────────────
+
+enum Role {
+  STUDENT
+  FACULTY
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum ContestStatus {
+  DRAFT
+  SCHEDULED
+  LIVE
+  ENDED
+  ARCHIVED
+}
+
+enum SubmissionVerdict {
+  PENDING
+  QUEUED
+  RUNNING
+  ACCEPTED
+  WRONG_ANSWER
+  TIME_LIMIT_EXCEEDED
+  MEMORY_LIMIT_EXCEEDED
+  RUNTIME_ERROR
+  COMPILATION_ERROR
+  INTERNAL_ERROR
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum ScoringStrategy {
+  ICPC
+  POINTS_BINARY
+}
+
+// ─────────────────────────────────────────────
+// USER & PROFILE
+// ─────────────────────────────────────────────
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  role         Role     @default(STUDENT)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  profile              Profile?
+  submissions          Submission[]
+  contestParticipants  ContestParticipant[]
+  certificates         Certificate[]
+  auditLogs            AuditLog[]
+  createdContests      Contest[]             @relation("ContestCreator")
+  authoredProblems     Problem[]             @relation("ProblemAuthor")
+  leaderboardEntries   Leaderboard[]
+
+  @@index([email])
+  @@map("users")
+}
+
+model Profile {
+  id        String  @id @default(uuid())
+  userId    String  @unique
+  fullName  String
+  college   String?
+  avatarUrl String?
+  bio       String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("profiles")
+}
+
+// ─────────────────────────────────────────────
+// CONTEST
+// ─────────────────────────────────────────────
+
+model Contest {
+  id                String          @id @default(uuid())
+  title             String
+  slug              String          @unique
+  description       String
+  startTime         DateTime
+  endTime           DateTime
+  status            ContestStatus   @default(DRAFT)
+  scoringStrategy   ScoringStrategy @default(ICPC)
+  freezeLeaderboard Boolean         @default(false)
+  rules             String?
+  createdById       String
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  // Relations
+  createdBy    User                 @relation("ContestCreator", fields: [createdById], references: [id])
+  participants ContestParticipant[]
+  problems     ContestProblem[]
+  submissions  Submission[]
+  leaderboard  Leaderboard[]
+  certificates Certificate[]
+
+  @@index([status])
+  @@index([startTime, endTime])
+  @@index([createdById])
+  @@map("contests")
+}
+
+model ContestParticipant {
+  id           String   @id @default(uuid())
+  contestId    String
+  userId       String
+  registeredAt DateTime @default(now())
+
+  contest Contest @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([contestId, userId])
+  @@index([contestId, userId])
+  @@map("contest_participants")
+}
+
+// ─────────────────────────────────────────────
+// PROBLEM
+// ─────────────────────────────────────────────
+
+model Problem {
+  id               String     @id @default(uuid())
+  title            String
+  slug             String     @unique
+  statement        String
+  inputFormat      String
+  outputFormat     String
+  constraints      String
+  difficulty       Difficulty @default(MEDIUM)
+  timeLimit        Int        // milliseconds
+  memoryLimit      Int        // megabytes
+  allowedLanguages  String[]
+  functionSignature Json?
+  starterCode       Json?
+  driverCode        Json?
+  authorId          String
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+
+  // Relations
+  author         User             @relation("ProblemAuthor", fields: [authorId], references: [id])
+  contestProblems ContestProblem[]
+  tags           ProblemTag[]
+  testCases      TestCase[]
+  submissions    Submission[]
+
+  @@index([authorId])
+  @@index([difficulty])
+  @@index([slug])
+  @@map("problems")
+}
+
+model ContestProblem {
+  id         String @id @default(uuid())
+  contestId  String
+  problemId  String
+  orderIndex Int
+  points     Int    @default(100)
+
+  contest Contest @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  problem Problem @relation(fields: [problemId], references: [id], onDelete: Cascade)
+
+  @@unique([contestId, problemId])
+  @@index([contestId])
+  @@map("contest_problems")
+}
+
+model Tag {
+  id       String       @id @default(uuid())
+  name     String       @unique
+  problems ProblemTag[]
+
+  @@map("tags")
+}
+
+model ProblemTag {
+  problemId String
+  tagId     String
+
+  problem Problem @relation(fields: [problemId], references: [id], onDelete: Cascade)
+  tag     Tag     @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([problemId, tagId])
+  @@index([tagId])
+  @@map("problem_tags")
+}
+
+// ─────────────────────────────────────────────
+// TEST CASES
+// ─────────────────────────────────────────────
+
+model TestCase {
+  id             String   @id @default(uuid())
+  problemId      String
+  input          String
+  expectedOutput String
+  isHidden       Boolean  @default(true)
+  isSample       Boolean  @default(false)
+  weight         Int      @default(1)
+  createdAt      DateTime @default(now())
+
+  problem            Problem            @relation(fields: [problemId], references: [id], onDelete: Cascade)
+  submissionResults  SubmissionResult[]
+
+  @@index([problemId])
+  @@index([problemId, isHidden])
+  @@map("test_cases")
+}
+
+// ─────────────────────────────────────────────
+// SUBMISSIONS
+// ─────────────────────────────────────────────
+
+model Submission {
+  id            String            @id @default(uuid())
+  userId        String
+  contestId     String?           // nullable: open practice submissions have no contest
+  problemId     String
+  language      String
+  sourceCode    String
+  status        SubmissionVerdict @default(QUEUED)
+  executionTime Int?              // milliseconds
+  memoryUsage   Int?              // megabytes
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  // Relations
+  user    User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  contest Contest?           @relation(fields: [contestId], references: [id], onDelete: SetNull)
+  problem Problem            @relation(fields: [problemId], references: [id], onDelete: Cascade)
+  results SubmissionResult[]
+
+  @@index([userId])
+  @@index([problemId, createdAt])
+  @@index([contestId, userId])
+  @@index([status])
+  @@map("submissions")
+}
+
+model SubmissionResult {
+  id            String            @id @default(uuid())
+  submissionId  String
+  testCaseId    String
+  verdict       SubmissionVerdict
+  executionTime Int?
+  memoryUsage   Int?
+  stderr        String?
+
+  submission Submission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  testCase   TestCase   @relation(fields: [testCaseId], references: [id], onDelete: Cascade)
+
+  @@index([submissionId])
+  @@map("submission_results")
+}
+
+// ─────────────────────────────────────────────
+// LEADERBOARD
+// ─────────────────────────────────────────────
+
+model Leaderboard {
+  id                 String    @id @default(uuid())
+  contestId          String
+  userId             String
+  solvedCount        Int       @default(0)
+  totalScore         Int       @default(0)
+  penalty            Int       @default(0)
+  lastSubmissionTime DateTime?
+  updatedAt          DateTime  @updatedAt
+
+  contest Contest @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([contestId, userId])
+  @@index([contestId, totalScore])
+  @@index([contestId, userId])
+  @@map("leaderboard")
+}
+
+// ─────────────────────────────────────────────
+// CERTIFICATE
+// ─────────────────────────────────────────────
+
+model Certificate {
+  id              String   @id @default(uuid())
+  certificateCode String   @unique
+  userId          String
+  contestId       String
+  achievement     String
+  issuedAt        DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  contest Contest @relation(fields: [contestId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([contestId])
+  @@map("certificates")
+}
+
+// ─────────────────────────────────────────────
+// AUDIT LOG
+// ─────────────────────────────────────────────
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String
+  action    String
+  resource  String
+  details   Json?
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
