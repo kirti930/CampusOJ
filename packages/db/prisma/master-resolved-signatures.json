@@ -1,0 +1,4687 @@
+{
+  "3sum": {
+    "functionName": "threeSum",
+    "returnType": "int[][]",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "sum-of-two-linked-lists": {
+    "functionName": "addTwoLists",
+    "returnType": "ListNode",
+    "parameters": [
+      {
+        "name": "l1",
+        "type": "ListNode"
+      },
+      {
+        "name": "l2",
+        "type": "ListNode"
+      }
+    ]
+  },
+  "aggressive-cows": {
+    "functionName": "solve",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "stalls",
+        "type": "int[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "print-all-palindromic-partitions-of-a-string": {
+    "functionName": "allPalindromicPerms",
+    "returnType": "string[][]",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "allen-dictionary": {
+    "functionName": "findOrder",
+    "returnType": "string",
+    "parameters": [
+      {
+        "name": "dict",
+        "type": "string[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "allocate-minimum-number-of-pages": {
+    "functionName": "findPages",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "pages",
+        "type": "int[]"
+      },
+      {
+        "name": "m",
+        "type": "int"
+      }
+    ]
+  },
+  "arithmetic-expressions": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "arithmeticExpressions"
+  },
+  "assembly-line-scheduling": {
+    "parameters": [
+      {
+        "name": "a",
+        "type": "number[]"
+      },
+      {
+        "name": "b",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "carAssembly"
+  },
+  "bbt-counter": {
+    "functionName": "countBT",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "h",
+        "type": "int"
+      }
+    ]
+  },
+  "bfs": {
+    "functionName": "bfsOfGraph",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "V",
+        "type": "int"
+      },
+      {
+        "name": "adj",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "backtracking-set-2-rat-in-a-maze": {
+    "functionName": "findPath",
+    "returnType": "string[]",
+    "parameters": [
+      {
+        "name": "maze",
+        "type": "int[][]"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "backtracking-set-7-hamiltonian-cycle": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "backtrackingSet7HamiltonianCycle"
+  },
+  "backtracking-set-8-solving-cryptarithmetic-puzzles": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "backtrackingSet8SolvingCryptarithmeticPuzzles"
+  },
+  "check-for-balanced-tree": {
+    "functionName": "isBalanced",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "bellman-ford": {
+    "functionName": "bellmanFord",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "V",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "int[][]"
+      },
+      {
+        "name": "src",
+        "type": "int"
+      }
+    ]
+  },
+  "best-time-to-buy-and-sell-stock": {
+    "functionName": "maxProfit",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "prices",
+        "type": "int[]"
+      }
+    ]
+  },
+  "maximum-profit-by-buying-and-selling-a-share-at-most-twice": {
+    "parameters": [
+      {
+        "name": "prices",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maxProfit"
+  },
+  "binary-search": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      },
+      {
+        "name": "target",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "search"
+  },
+  "binary-search-tree-set-1-search-and-insertion": {
+    "functionName": "insert",
+    "returnType": "TreeNode",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      },
+      {
+        "name": "val",
+        "type": "int"
+      }
+    ]
+  },
+  "binary-tree-level-order-traversal": {
+    "functionName": "levelOrder",
+    "returnType": "int[][]",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "maximum-path-sum": {
+    "functionName": "maxPathSum",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "binary-tree-maximum-path-sum": {
+    "functionName": "maxPathSum",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "binary-tree-to-bst": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "binaryTreeToBst"
+  },
+  "binary-tree-to-dll": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "binaryTreeToDll"
+  },
+  "bottom-view-of-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "bottomViewOfBinaryTree"
+  },
+  "boundary-traversal-of-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "boundaryTraversalOfBinaryTree"
+  },
+  "boyer-moore-algorithm-for-pattern-searching": {
+    "functionName": "search",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "txt",
+        "type": "string"
+      },
+      {
+        "name": "pat",
+        "type": "string"
+      }
+    ]
+  },
+  "matrix-chain-multiplication": {
+    "functionName": "maxCoins",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "calculate-square-of-a-number-without-using-and-pow": {
+    "functionName": "calculateSquare",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "catalan-number": {
+    "functionName": "findCatalan",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "ceiling-in-a-sorted-array": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findCeil"
+  },
+  "cheapest-flights-within-k-stops": {
+    "functionName": "findCheapestPrice",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "flights",
+        "type": "int[][]"
+      },
+      {
+        "name": "src",
+        "type": "int"
+      },
+      {
+        "name": "dst",
+        "type": "int"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "check-for-palindrome": {
+    "functionName": "isPalindrome",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "check-if-reversing-a-sub-array-make-the-array-sorted": {
+    "functionName": "checkReverse",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "int[]"
+      }
+    ]
+  },
+  "check-if-tree-is-isomorphic": {
+    "functionName": "isIsomorphic",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "root1",
+        "type": "TreeNode"
+      },
+      {
+        "name": "root2",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "check-if-a-given-graph-is-tree-or-not": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "checkIfAGivenGraphIsTreeOrNot"
+  },
+  "check-whether-bst-contains-dead-end": {
+    "functionName": "isDeadEnd",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "chinese-postman": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "chinesePostman"
+  },
+  "chocolate-distribution-problem": {
+    "functionName": "findMinDiff",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "int[]"
+      },
+      {
+        "name": "m",
+        "type": "int"
+      }
+    ]
+  },
+  "choose-k-array-elements-such-that-difference-of-maximum-and-minimum-is-minimized": {
+    "functionName": "minDiff",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "int[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "climbing-stairs": {
+    "functionName": "climbStairs",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "clone-graph": {
+    "functionName": "cloneGraph",
+    "returnType": "any",
+    "parameters": [
+      {
+        "name": "node",
+        "type": "any"
+      }
+    ]
+  },
+  "clone-a-linked-list-with-next-and-random-pointer": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "cloneALinkedListWithNextAndRandomPointer"
+  },
+  "coin-change": {
+    "functionName": "coinChange",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "coins",
+        "type": "int[]"
+      },
+      {
+        "name": "amount",
+        "type": "int"
+      }
+    ]
+  },
+  "coin-game": {
+    "functionName": "findWinner",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "a",
+        "type": "int"
+      },
+      {
+        "name": "b",
+        "type": "int"
+      }
+    ]
+  },
+  "coin-game-winner": {
+    "functionName": "findWinner",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "a",
+        "type": "int"
+      },
+      {
+        "name": "b",
+        "type": "int"
+      }
+    ]
+  },
+  "combination-sum": {
+    "functionName": "combinationSum",
+    "returnType": "int[][]",
+    "parameters": [
+      {
+        "name": "candidates",
+        "type": "int[]"
+      },
+      {
+        "name": "target",
+        "type": "int"
+      }
+    ]
+  },
+  "combination-sum-iv": {
+    "functionName": "combinationSum4",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      },
+      {
+        "name": "target",
+        "type": "int"
+      }
+    ]
+  },
+  "find-a-common-element-in-all-rows-of-a-given-row-wise-sorted-matrix": {
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findCommonElement"
+  },
+  "find-common-elements-three-sorted-arrays": {
+    "parameters": [
+      {
+        "name": "A",
+        "type": "number[]"
+      },
+      {
+        "name": "B",
+        "type": "number[]"
+      },
+      {
+        "name": "C",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "commonElements"
+  },
+  "connect-ropes": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "connectRopes"
+  },
+  "construct-bst-from-given-preorder-traversal": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "constructBstFromGivenPreorderTraversal"
+  },
+  "construct-binary-tree-from-preorder-and-inorder-traversal": {
+    "functionName": "buildTree",
+    "returnType": "TreeNode",
+    "parameters": [
+      {
+        "name": "preorder",
+        "type": "int[]"
+      },
+      {
+        "name": "inorder",
+        "type": "int[]"
+      }
+    ]
+  },
+  "construct-binary-tree-from-string-with-brackets": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "constructBinaryTreeFromStringWithBrackets"
+  },
+  "construct-a-trie-from-scratch": {
+    "isClass": true,
+    "methods": [
+      {
+        "name": "insert",
+        "parameters": [
+          {
+            "name": "word",
+            "type": "string"
+          }
+        ],
+        "returnType": "void"
+      },
+      {
+        "name": "search",
+        "parameters": [
+          {
+            "name": "word",
+            "type": "string"
+          }
+        ],
+        "returnType": "boolean"
+      },
+      {
+        "name": "startsWith",
+        "parameters": [
+          {
+            "name": "prefix",
+            "type": "string"
+          }
+        ],
+        "returnType": "boolean"
+      }
+    ],
+    "className": "Trie",
+    "constructorParams": []
+  },
+  "container-with-most-water": {
+    "functionName": "maxArea",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "height",
+        "type": "int[]"
+      }
+    ]
+  },
+  "contains-duplicate": {
+    "functionName": "containsDuplicate",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "convert-normal-bst-to-balanced-bst": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "convertNormalBstToBalancedBst"
+  },
+  "copy-set-bits-in-a-range": {
+    "functionName": "setSetBit",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      },
+      {
+        "name": "l",
+        "type": "int"
+      },
+      {
+        "name": "r",
+        "type": "int"
+      }
+    ]
+  },
+  "count-bst-nodes-that-lie-in-a-given-range": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "countBstNodesThatLieInAGivenRange"
+  },
+  "count-palindromic-subsequences": {
+    "functionName": "countPalindromes",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "count-palindromic-subsequences-345": {
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "countPalindromes"
+  },
+  "subarray-distinct-elements": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "countDistinct"
+  },
+  "count-triplets-with-sum-smaller-that-a-given-value": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "countTriplets"
+  },
+  "count-all-subsequences-having-product-less-than-k": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "countAllSubsequencesHavingProductLessThanK"
+  },
+  "count-distinct-elements-in-every-window-of-size-k": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "countDistinctElementsInEveryWindowOfSizeK"
+  },
+  "count-natural-numbers-whose-permutation-greater-number": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "countNaturalNumbersWhosePermutationGreaterNumber"
+  },
+  "count-number-of-bits-to-be-flipped-to-convert-a-to-b": {
+    "functionName": "countBitsFlip",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "a",
+        "type": "int"
+      },
+      {
+        "name": "b",
+        "type": "int"
+      }
+    ]
+  },
+  "count-of-range-sum": {
+    "functionName": "countRangeSum",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      },
+      {
+        "name": "lower",
+        "type": "int"
+      },
+      {
+        "name": "upper",
+        "type": "int"
+      }
+    ]
+  },
+  "count-of-smaller-numbers-after-self": {
+    "functionName": "countSmaller",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "count-set-bits-in-an-integer": {
+    "functionName": "setBits",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "count-total-set-bits-in-all-numbers-from-1-to-n": {
+    "functionName": "countSetBits",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "counting-sort": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "countSort"
+  },
+  "detect-cycle-in-an-undirected-graph": {
+    "functionName": "isCycle",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "V",
+        "type": "int"
+      },
+      {
+        "name": "adj",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "topological-sort": {
+    "functionName": "topoSort",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "V",
+        "type": "int"
+      },
+      {
+        "name": "adj",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "course-schedule-iii": {
+    "functionName": "scheduleCourse",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "courses",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "create-sorted-array-through-instructions": {
+    "functionName": "createSortedArray",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "instructions",
+        "type": "int[]"
+      }
+    ]
+  },
+  "create-a-matrix-with-alternating-rectangles-of-o-and-x": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "createAMatrixWithAlternatingRectanglesOfOAndX"
+  },
+  "create-a-mirror-tree-from-the-given-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "createAMirrorTreeFromTheGivenBinaryTree"
+  },
+  "crossword-puzzle": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "crosswordPuzzle"
+  },
+  "cuckoo-hashing": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "cuckooHashing"
+  },
+  "dfs": {
+    "functionName": "dfsOfGraph",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "V",
+        "type": "int"
+      },
+      {
+        "name": "adj",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "decode-ways": {
+    "functionName": "numDecodings",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "delete-node-in-a-bst": {
+    "functionName": "deleteNode",
+    "returnType": "TreeNode",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      },
+      {
+        "name": "key",
+        "type": "int"
+      }
+    ]
+  },
+  "delete-nodes-which-have-a-greater-value-on-right-side": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "deleteNodesWhichHaveAGreaterValueOnRightSide"
+  },
+  "delete-without-head-node": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "deleteWithoutHeadNode"
+  },
+  "design-stack-with-middle-operation": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "designStackWithMiddleOperation"
+  },
+  "design-and-implement-special-stack": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "designAndImplementSpecialStack"
+  },
+  "negative-weighted-cycle": {
+    "functionName": "isNegativeWeightCycle",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "detect-and-remove-loop-in-a-linked-list": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "detectAndRemoveLoopInALinkedList"
+  },
+  "detect-cycle-in-a-graph": {
+    "functionName": "isCyclic",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "V",
+        "type": "int"
+      },
+      {
+        "name": "adj",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "diagonal-traversal-of-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "diagonalTraversalOfBinaryTree"
+  },
+  "diameter-of-a-binary-tree": {
+    "functionName": "diameterOfBinaryTree",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "dijkstras-shortest-path-algorithm": {
+    "functionName": "dijkstra",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "V",
+        "type": "int"
+      },
+      {
+        "name": "adj",
+        "type": "int[][]"
+      },
+      {
+        "name": "src",
+        "type": "int"
+      }
+    ]
+  },
+  "distance-of-nearest-cell": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "distanceOfNearestCell"
+  },
+  "divide-two-integers": {
+    "functionName": "divide",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "dividend",
+        "type": "int"
+      },
+      {
+        "name": "divisor",
+        "type": "int"
+      }
+    ]
+  },
+  "duplicate-subtrees": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "duplicateSubtrees"
+  },
+  "duplicate-subtree-in-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "duplicateSubtreeInBinaryTree"
+  },
+  "edit-distance": {
+    "functionName": "minDistance",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "word1",
+        "type": "string"
+      },
+      {
+        "name": "word2",
+        "type": "string"
+      }
+    ]
+  },
+  "efficiently-implement-k-stacks-single-array": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "efficientlyImplementKStacksSingleArray"
+  },
+  "egg-dropping-puzzle": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "eggDrop"
+  },
+  "evaluation-of-postfix-expression": {
+    "functionName": "evaluatePostfix",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "find-duplicates-in-on-time-and-o1-extra-space": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findDuplicatesInOnTimeAndO1ExtraSpace"
+  },
+  "find-four-elements-that-sum-to-a-given-value": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findFourElementsThatSumToAGivenValue"
+  },
+  "find-median-from-data-stream": {
+    "isClass": true,
+    "methods": [
+      {
+        "name": "addNum",
+        "parameters": [
+          {
+            "name": "num",
+            "type": "int"
+          }
+        ],
+        "returnType": "void"
+      },
+      {
+        "name": "findMedian",
+        "parameters": [],
+        "returnType": "double"
+      }
+    ],
+    "className": "MedianFinder",
+    "constructorParams": []
+  },
+  "find-minimum-number-of-merge-operations-to-make-an-array-palindrome": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findMinimumNumberOfMergeOperationsToMakeAnArrayPalindrome"
+  },
+  "find-minimum-in-rotated-sorted-array": {
+    "functionName": "findMin",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "find-pair-with-sum-in-sorted-rotated-array": {
+    "functionName": "pairInSortedRotated",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "int[]"
+      },
+      {
+        "name": "target",
+        "type": "int"
+      }
+    ]
+  },
+  "find-shortest-safe-route-in-a-path-with-landmines": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "findShortestSafeRouteInAPathWithLandmines"
+  },
+  "find-surpasser-count-of-each-element-in-array": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findSurpasserCountOfEachElementInArray"
+  },
+  "find-a-tour-that-visits-all-stations": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findATourThatVisitsAllStations"
+  },
+  "find-if-an-expression-has-duplicate-parenthesis-or-not": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findIfAnExpressionHasDuplicateParenthesisOrNot"
+  },
+  "find-if-there-is-a-path-of-more-than-k-length-from-a-source": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "findIfThereIsAPathOfMoreThanKLengthFromASource"
+  },
+  "find-k-closest-elements-to-a-given-value": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findKClosestElementsToAGivenValue"
+  },
+  "find-longest-path-directed-acyclic-graph": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "findLongestPathDirectedAcyclicGraph"
+  },
+  "find-maximum-equal-sum-of-every-three-stacks": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findMaximumEqualSumOfEveryThreeStacks"
+  },
+  "find-maximum-height-pyramid-from-the-given-array-of-objects": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findMaximumHeightPyramidFromTheGivenArrayOfObjects"
+  },
+  "find-median-of-bst-in-on-time-and-o1-space": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findMedianOfBstInOnTimeAndO1Space"
+  },
+  "find-minimum-time-to-finish-all-jobs-with-given-constraints": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findMinimumTimeToFinishAllJobsWithGivenConstraints"
+  },
+  "find-paths-from-corner-cell-to-middle-cell-in-maze": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "findPathsFromCornerCellToMiddleCellInMaze"
+  },
+  "find-position-of-the-only-set-bit": {
+    "functionName": "findPosition",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "find-shortest-unique-prefix-for-every-word-in-a-given-list": {
+    "functionName": "findPrefixes",
+    "returnType": "string[]",
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "string[]"
+      }
+    ]
+  },
+  "find-smallest-number-with-given-number-of-digits-and-digit-sum": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findSmallestNumberWithGivenNumberOfDigitsAndDigitSum"
+  },
+  "find-the-maximum-of-minimums-for-every-window-size-in-a-given-array": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findTheMaximumOfMinimumsForEveryWindowSizeInAGivenArray"
+  },
+  "find-the-maximum-repeating-number-in-on-time-and-o1-extra-space": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findTheMaximumRepeatingNumberInOnTimeAndO1ExtraSpace"
+  },
+  "find-the-recurring-function": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findTheRecurringFunction"
+  },
+  "find-the-smallest-positive-number": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findTheSmallestPositiveNumber"
+  },
+  "find-the-two-non-repeating-elements-in-an-array-of-repeating-elements": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findTheTwoNonRepeatingElementsInAnArrayOfRepeatingElements"
+  },
+  "find-whether-it-is-possible-to-finish-all-tasks-or-not-from-given-dependencies": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findWhetherItIsPossibleToFinishAllTasksOrNotFromGivenDependencies"
+  },
+  "queue-based-approach-for-first-non-repeating-character-in-a-stream": {
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ],
+    "returnType": "string",
+    "functionName": "FirstNonRepeating"
+  },
+  "flatten-bst-to-sorted-list": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "flattenBstToSortedList"
+  },
+  "flatten-a-linked-list-with-next-and-child-pointers": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "flattenALinkedListWithNextAndChildPointers"
+  },
+  "flattening-a-linked-list": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "flatteningALinkedList"
+  },
+  "flood-fill-algorithm": {
+    "functionName": "floodFill",
+    "returnType": "int[][]",
+    "parameters": [
+      {
+        "name": "image",
+        "type": "int[][]"
+      },
+      {
+        "name": "sr",
+        "type": "int"
+      },
+      {
+        "name": "sc",
+        "type": "int"
+      },
+      {
+        "name": "color",
+        "type": "int"
+      }
+    ]
+  },
+  "floyd-warshall": {
+    "functionName": "shortestDistance",
+    "returnType": "int[][]",
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "fractional-knapsack-problem": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "fractionalKnapsackProblem"
+  },
+  "circular-tour": {
+    "functionName": "canCompleteCircuit",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "gas",
+        "type": "int[]"
+      },
+      {
+        "name": "cost",
+        "type": "int[]"
+      }
+    ]
+  },
+  "given-a-sequence-of-words-print-all-anagrams-together": {
+    "functionName": "anagrams",
+    "returnType": "string[][]",
+    "parameters": [
+      {
+        "name": "string_list",
+        "type": "string[]"
+      }
+    ]
+  },
+  "given-n-appointments-find-all-conflicting-appointments": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "givenNAppointmentsFindAllConflictingAppointments"
+  },
+  "gold-mine": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "goldMine"
+  },
+  "graph-coloring": {
+    "functionName": "graphColoring",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "graph",
+        "type": "int[][]"
+      },
+      {
+        "name": "m",
+        "type": "int"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "greedy-algorithm-egyptian-fraction": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "greedyAlgorithmEgyptianFraction"
+  },
+  "greedy-algorithm-to-find-minimum-number-of-coins": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "greedyAlgorithmToFindMinimumNumberOfCoins"
+  },
+  "group-anagrams": {
+    "functionName": "groupAnagrams",
+    "returnType": "string[][]",
+    "parameters": [
+      {
+        "name": "strs",
+        "type": "string[]"
+      }
+    ]
+  },
+  "group-shifted-strings": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "groupShiftedStrings"
+  },
+  "heap-sort": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "heapSort"
+  },
+  "height-of-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "heightOfBinaryTree"
+  },
+  "hello-world": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "helloWorld"
+  },
+  "house-robber": {
+    "functionName": "rob",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "houe-robber-2": {
+    "functionName": "rob",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "implement-queue-using-stacks": {
+    "isClass": true,
+    "methods": [
+      {
+        "name": "push",
+        "parameters": [
+          {
+            "name": "x",
+            "type": "int"
+          }
+        ],
+        "returnType": "void"
+      },
+      {
+        "name": "pop",
+        "parameters": [],
+        "returnType": "int"
+      },
+      {
+        "name": "peek",
+        "parameters": [],
+        "returnType": "int"
+      },
+      {
+        "name": "empty",
+        "parameters": [],
+        "returnType": "boolean"
+      }
+    ],
+    "className": "MyQueue",
+    "constructorParams": []
+  },
+  "implement-stack-queue-using-deque": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "implementStackQueueUsingDeque"
+  },
+  "implement-stack-using-queues": {
+    "isClass": true,
+    "methods": [
+      {
+        "name": "push",
+        "parameters": [
+          {
+            "name": "x",
+            "type": "int"
+          }
+        ],
+        "returnType": "void"
+      },
+      {
+        "name": "pop",
+        "parameters": [],
+        "returnType": "int"
+      },
+      {
+        "name": "top",
+        "parameters": [],
+        "returnType": "int"
+      },
+      {
+        "name": "empty",
+        "parameters": [],
+        "returnType": "boolean"
+      }
+    ],
+    "className": "MyStack",
+    "constructorParams": []
+  },
+  "implement-a-phone-directory": {
+    "functionName": "displayContacts",
+    "returnType": "string[][]",
+    "parameters": [
+      {
+        "name": "contact",
+        "type": "string[]"
+      },
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "infix-to-postfix": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "infixToPostfix"
+  },
+  "write-a-function-to-get-the-intersection-point-of-two-linked-lists": {
+    "functionName": "intersectPoint",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "head1",
+        "type": "ListNode"
+      },
+      {
+        "name": "head2",
+        "type": "ListNode"
+      }
+    ]
+  },
+  "inversion-of-array": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "inversionOfArray"
+  },
+  "invert-binary-tree": {
+    "functionName": "invertTree",
+    "returnType": "TreeNode",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "bipartitie-graph": {
+    "functionName": "isBipartite",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "graph",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "iterative-tower-of-hanoi": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "iterativeTowerOfHanoi"
+  },
+  "itinerary-from-a-list-of-tickets": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "itineraryFromAListOfTickets"
+  },
+  "job-sequencing-using-disjoint-set-union": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "jobSequencingUsingDisjointSetUnion"
+  },
+  "journey-to-moon": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "journeyToMoon"
+  },
+  "jumps-game": {
+    "functionName": "canJump",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "minimum-number-of-jumps": {
+    "functionName": "jump",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "k-largest-elements-in-an-array": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "kLargest"
+  },
+  "k-maximum-sum-combinations-from-two-arrays": {
+    "functionName": "maxCombinations",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "a",
+        "type": "int[]"
+      },
+      {
+        "name": "b",
+        "type": "int[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "k-th-smallest-element-after-removing-some-integers-from-natural-numbers": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "kThSmallestElementAfterRemovingSomeIntegersFromNaturalNumbers"
+  },
+  "knapsack-problem": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "knapsackProblem"
+  },
+  "knapsack-with-duplicate-items": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "knapsackWithDuplicateItems"
+  },
+  "knight-tour": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "knightTour"
+  },
+  "kosarajus-theorem": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "kosarajusTheorem"
+  },
+  "kruskals-mst": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "kruskalsMst"
+  },
+  "kth-largest-element-in-a-stream": {
+    "isClass": true,
+    "methods": [
+      {
+        "name": "add",
+        "parameters": [
+          {
+            "name": "val",
+            "type": "int"
+          }
+        ],
+        "returnType": "int"
+      }
+    ],
+    "className": "KthLargest",
+    "constructorParams": [
+      {
+        "name": "k",
+        "type": "int"
+      },
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "kth-largest-element-in-an-array": {
+    "functionName": "findKthLargest",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "kth-smallest-element-in-a-bst": {
+    "functionName": "kthSmallest",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "kth-smallest-element-in-a-sorted-matrix": {
+    "functionName": "kthSmallest",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "int[][]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "kth-ancestor-of-a-node-in-binary-tree": {
+    "functionName": "kthAncestor",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      },
+      {
+        "name": "node",
+        "type": "int"
+      }
+    ]
+  },
+  "kth-largest-element-in-bst": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "kthLargestElementInBst"
+  },
+  "kth-smallestlargest-element-in-unsorted-array": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "kthSmallestlargestElementInUnsortedArray"
+  },
+  "lru-cache-implementation": {
+    "isClass": true,
+    "methods": [
+      {
+        "name": "get",
+        "parameters": [
+          {
+            "name": "key",
+            "type": "int"
+          }
+        ],
+        "returnType": "int"
+      },
+      {
+        "name": "put",
+        "parameters": [
+          {
+            "name": "key",
+            "type": "int"
+          },
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ],
+        "returnType": "void"
+      }
+    ],
+    "className": "LRUCache",
+    "constructorParams": [
+      {
+        "name": "capacity",
+        "type": "int"
+      }
+    ]
+  },
+  "largest-bst-in-a-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "largestBstInABinaryTree"
+  },
+  "largest-number": {
+    "functionName": "largestNumber",
+    "returnType": "string",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "largest-subarray-with-0-sum": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "largestSubarrayWith0Sum"
+  },
+  "largest-submatrix-with-sum-0": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "largestSubmatrixWithSum0"
+  },
+  "largest-area-rectangular-sub-matrix-with-equal-number-of-1s-and-0s": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "largestAreaRectangularSubMatrixWithEqualNumberOf1sAnd0s"
+  },
+  "leaf-at-same-level": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "leafAtSameLevel"
+  },
+  "left-view-of-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "leftViewOfBinaryTree"
+  },
+  "length-of-the-largest-subarray-with-contiguous-elements": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "lengthOfTheLargestSubarrayWithContiguousElements"
+  },
+  "lexicographically-smallest-array-k-consecutive-swaps": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "lexicographicallySmallestArrayKConsecutiveSwaps"
+  },
+  "linked-list-cycle": {
+    "functionName": "hasCycle",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "head",
+        "type": "ListNode"
+      }
+    ]
+  },
+  "linked-list-in-zig-zag-fashion": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "linkedListInZigZagFashion"
+  },
+  "longest-alternating-sequence": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "longestAlternatingSequence"
+  },
+  "longest-common-prefix": {
+    "functionName": "longestCommonPrefix",
+    "returnType": "string",
+    "parameters": [
+      {
+        "name": "strs",
+        "type": "string[]"
+      }
+    ]
+  },
+  "longest-common-substring": {
+    "functionName": "longestCommonSubsequence",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "text1",
+        "type": "string"
+      },
+      {
+        "name": "text2",
+        "type": "string"
+      }
+    ]
+  },
+  "longest-common-subsequence": {
+    "functionName": "longestCommonSubsequence",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "text1",
+        "type": "string"
+      },
+      {
+        "name": "text2",
+        "type": "string"
+      }
+    ]
+  },
+  "longest-prefix-suffix": {
+    "functionName": "longestPrefix",
+    "returnType": "string",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "lis": {
+    "functionName": "lengthOfLIS",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "longest-palindromic-subsequnce": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "longestPalindromicSubsequnce"
+  },
+  "longest-palindromic-substring": {
+    "functionName": "longestPalindrome",
+    "returnType": "string",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "longest-palindromic-substring-346": {
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ],
+    "returnType": "string",
+    "functionName": "longestPalindrome"
+  },
+  "longest-possible-route-in-a-matrix-with-hurdles": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "longestPossibleRouteInAMatrixWithHurdles"
+  },
+  "longest-repeating-subsequence": {
+    "functionName": "characterReplacement",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "longest-repeating-character-replacement": {
+    "functionName": "characterReplacement",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "longest-substring-without-repeating-characters": {
+    "functionName": "lengthOfLongestSubstring",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "longest-valid-string": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "longestValidString"
+  },
+  "longest-subsequence-1": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "longestSubsequence1"
+  },
+  "lowest-common-ancestor-in-a-binary-tree": {
+    "functionName": "lca",
+    "returnType": "TreeNode",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      },
+      {
+        "name": "n1",
+        "type": "int"
+      },
+      {
+        "name": "n2",
+        "type": "int"
+      }
+    ]
+  },
+  "lowest-common-ancestor-of-a-binary-search-tree": {
+    "functionName": "lowestCommonAncestor",
+    "returnType": "TreeNode",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      },
+      {
+        "name": "p",
+        "type": "TreeNode"
+      },
+      {
+        "name": "q",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "m-coloring-problem": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "mColoringProblem"
+  },
+  "m-coloring-problem-284": {
+    "functionName": "graphColoring",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "graph",
+        "type": "int[][]"
+      },
+      {
+        "name": "m",
+        "type": "int"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "majority-element": {
+    "functionName": "majorityElement",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "make-all-array-elements-equal": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "makeAllArrayElementsEqual"
+  },
+  "max-length-chain": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maxLengthChain"
+  },
+  "maximal-rectangle": {
+    "functionName": "maximalRectangle",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "string[][]"
+      }
+    ]
+  },
+  "largest-square-in-matrix": {
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maximalSquare"
+  },
+  "maximize-the-cut-segments": {
+    "functionName": "maximizeTheCuts",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      },
+      {
+        "name": "z",
+        "type": "int"
+      }
+    ]
+  },
+  "maximize-sum-of-consecutive-differences-circular-array": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maximizeSumOfConsecutiveDifferencesCircularArray"
+  },
+  "maximum-depth-of-binary-tree": {
+    "functionName": "maxDepth",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "maximum-difference-of-zeros-and-ones-in-binary-string": {
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maxDifference"
+  },
+  "maximum-length-of-pair-chain": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maximumLengthOfPairChain"
+  },
+  "maximum-possible-number-by-doing-at-most-k-swaps": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maximumPossibleNumberByDoingAtMostKSwaps"
+  },
+  "maximum-product-subarray": {
+    "functionName": "maxProduct",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "maximum-subarray": {
+    "functionName": "maxSubArray",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "maximum-sum-subsequence-with-no-adjacent-elements": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maximumSumSubsequenceWithNoAdjacentElements"
+  },
+  "maximum-length-chain-of-pairs": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maximumLengthChainOfPairs"
+  },
+  "maximum-sum-increasing-subsequence": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maximumSumIncreasingSubsequence"
+  },
+  "maximum-sum-increasing-subsequence-335": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maximumSumIncreasingSubsequence335"
+  },
+  "median-of-stream-of-integers-running-integers": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "medianOfStreamOfIntegersRunningIntegers"
+  },
+  "median-of-two-sorted-array-with-different-size": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "medianOfTwoSortedArrayWithDifferentSize"
+  },
+  "merge-intervals": {
+    "functionName": "merge",
+    "returnType": "int[][]",
+    "parameters": [
+      {
+        "name": "intervals",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "merge-sort-for-linked-list": {
+    "parameters": [
+      {
+        "name": "list",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "sortList"
+  },
+  "merge-sorted-arrays-using-o1-space": {
+    "parameters": [
+      {
+        "name": "arr1",
+        "type": "number[]"
+      },
+      {
+        "name": "arr2",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "void",
+    "functionName": "merge"
+  },
+  "merge-two-bsts": {
+    "parameters": [
+      {
+        "name": "bst1",
+        "type": "number[]"
+      },
+      {
+        "name": "bst2",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "merge"
+  },
+  "merge-two-sorted-lists": {
+    "functionName": "mergeTwoLists",
+    "returnType": "ListNode",
+    "parameters": [
+      {
+        "name": "list1",
+        "type": "ListNode"
+      },
+      {
+        "name": "list2",
+        "type": "ListNode"
+      }
+    ]
+  },
+  "merge-k-sorted-lists": {
+    "functionName": "mergeKLists",
+    "returnType": "ListNode",
+    "parameters": [
+      {
+        "name": "lists",
+        "type": "any"
+      }
+    ]
+  },
+  "merge-k-sorted-lists-248": {
+    "parameters": [
+      {
+        "name": "val=0",
+        "type": "int"
+      },
+      {
+        "name": "next=None",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "mergeKSortedLists248"
+  },
+  "minimise-the-cash-flow": {
+    "parameters": [
+      {
+        "name": "graph",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minCashFlow"
+  },
+  "minimize-cash-flow-among-a-given-set-of-friends-who-have-borrowed-money-from-each-other": {
+    "parameters": [
+      {
+        "name": "transactions",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minTransfers"
+  },
+  "minimum-cost-to-cut-a-board-into-squares": {
+    "parameters": [
+      {
+        "name": "X",
+        "type": "number[]"
+      },
+      {
+        "name": "Y",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minimumCostOfBreaking"
+  },
+  "min-distance-between-two-given-nodes-of-a-binary-tree": {
+    "parameters": [
+      {
+        "name": "tree",
+        "type": "number[]"
+      },
+      {
+        "name": "a",
+        "type": "int"
+      },
+      {
+        "name": "b",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "findDist"
+  },
+  "minimum-edges-to-reverse-to-make-path-from-a-source-to-a-destination": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "s",
+        "type": "int"
+      },
+      {
+        "name": "t",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minEdgesToReverse"
+  },
+  "minimum-element-in-bst": {
+    "parameters": [
+      {
+        "name": "bst",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minValue"
+  },
+  "minimum-removals-from-array-to-make-max-min-k": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minRemoval"
+  },
+  "minimum-sum-absolute-difference-pairs-two-arrays": {
+    "parameters": [
+      {
+        "name": "A",
+        "type": "number[]"
+      },
+      {
+        "name": "B",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minAbsDiff"
+  },
+  "minimum-sum-two-numbers-formed-digits-array-2": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "string",
+    "functionName": "minSum"
+  },
+  "minimum-swaps-to-sort": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minSwaps"
+  },
+  "minimum-time-taken-by-each-job-to-be-completed-given-by-a-directed-acyclic-graph": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "minTime"
+  },
+  "minimum-window-substring": {
+    "functionName": "minWindow",
+    "returnType": "string",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      },
+      {
+        "name": "t",
+        "type": "string"
+      }
+    ]
+  },
+  "minimum-and-maximum-element-in-an-array": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minMax"
+  },
+  "minimum-cost-for-acquiring-all-coins-with-k-extra-coins-allowed-with-every-coin": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minimumCostForAcquiringAllCoinsWithKExtraCoinsAllowedWithEveryCoin"
+  },
+  "minimum-swap-required-to-convert-binary-tree-to-binary-search-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "minimumSwapRequiredToConvertBinaryTreeToBinarySearchTree"
+  },
+  "mos-algorithm": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "moAlgorithm"
+  },
+  "convert-a-sentence-into-its-equivalent-mobile-numeric-keypad-sequence": {
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ],
+    "returnType": "string",
+    "functionName": "printSequence"
+  },
+  "mobile-numeric-keypad": {
+    "functionName": "getCount",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "multiply-two-numbers-represented-linked-lists": {
+    "parameters": [
+      {
+        "name": "l1",
+        "type": "number[]"
+      },
+      {
+        "name": "l2",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "multiplyTwoLists"
+  },
+  "n-queens": {
+    "functionName": "solveNQueens",
+    "returnType": "string[][]",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "next-greater-element": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "nextLargerElement"
+  },
+  "next-larger-element": {
+    "functionName": "nextGreaterElement",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "nums1",
+        "type": "int[]"
+      },
+      {
+        "name": "nums2",
+        "type": "int[]"
+      }
+    ]
+  },
+  "next-permutation": {
+    "functionName": "nextPermutation",
+    "returnType": "void",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "next-permutation-39": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "void",
+    "functionName": "nextPermutation"
+  },
+  "next-smaller-element": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "nextSmallerElement"
+  },
+  "non-overlapping-intervals": {
+    "functionName": "eraseOverlapIntervals",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "intervals",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "find-the-number-of-islands-set-1-using-dfs": {
+    "parameters": [
+      {
+        "name": "grid",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "numIslands"
+  },
+  "find-the-number-of-islands": {
+    "functionName": "numIslands",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "grid",
+        "type": "string[][]"
+      }
+    ]
+  },
+  "number-of-operations-to-make-network-connected": {
+    "functionName": "makeConnected",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "connections",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "number-of-triangles": {
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "countTriangles"
+  },
+  "oliver-and-the-game": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "int"
+      },
+      {
+        "name": "a",
+        "type": "int"
+      },
+      {
+        "name": "b",
+        "type": "int"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "isAncestor"
+  },
+  "optimal-bst": {
+    "parameters": [
+      {
+        "name": "freq",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "optimalBST"
+  },
+  "optimal-strategy-for-a-game": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "maxCoins"
+  },
+  "pairs-with-specific-difference": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "pairsDiff"
+  },
+  "palindrome-substring-queries": {
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "palindromeQueries"
+  },
+  "palindromic-substrings": {
+    "functionName": "countSubstrings",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "paper-cut-minimum-number-squares": {
+    "parameters": [
+      {
+        "name": "m",
+        "type": "int"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minSquares"
+  },
+  "partition-equal-subset-sum": {
+    "functionName": "canPartition",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "partition-equal-subset-sum-343": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "canPartition"
+  },
+  "partition-of-set-into-k-subsets-with-equal-sum": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "canPartitionKSubsets"
+  },
+  "permutation-coefficient": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "r",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "permutationCoefficient"
+  },
+  "permute-two-arrays-such-that-sum-of-every-pair-is-greater-or-equal-to-k": {
+    "parameters": [
+      {
+        "name": "A",
+        "type": "number[]"
+      },
+      {
+        "name": "B",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "isPossible"
+  },
+  "piar-with-given-difference": {
+    "functionName": "findPair",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "int[]"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "point-to-next-higher-value-node-in-a-linked-list-with-an-arbitrary-pointer": {
+    "parameters": [
+      {
+        "name": "list",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "nextHigherNode"
+  },
+  "populate-inorder-successor-for-all-nodes": {
+    "parameters": [
+      {
+        "name": "tree",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "populateNext"
+  },
+  "program-to-find-whether-a-no-is-power-of-two": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "isPowerOfTwo"
+  },
+  "predecessor-and-successor": {
+    "functionName": "findPreSuc",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      },
+      {
+        "name": "key",
+        "type": "int"
+      }
+    ]
+  },
+  "preorder-to-postorder": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "preorderToPostorder"
+  },
+  "prims-algo": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "primsAlgo"
+  },
+  "print-all-the-duplicates-in-the-input-string": {
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "printDups"
+  },
+  "print-subarrays-with-0-sum": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "zeroSumSubarrays"
+  },
+  "print-unique-rows-in-a-given-boolean-matrix": {
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "uniqueRows"
+  },
+  "print-all-possible-combinations-of-r-elements-in-a-given-array-of-size-n": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "printAllPossibleCombinationsOfRElementsInAGivenArrayOfSizeN"
+  },
+  "print-all-k-sum-paths-in-a-binary-tree": {
+    "functionName": "sumK",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "problems-chocola": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "problemsChocola"
+  },
+  "product-of-array-except-itself": {
+    "functionName": "productExceptSelf",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "product-of-array-except-self": {
+    "functionName": "productExceptSelf",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "queue-reversal": {
+    "parameters": [
+      {
+        "name": "q",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "rev"
+  },
+  "quicksort-on-singly-linked-list": {
+    "parameters": [
+      {
+        "name": "list",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "quickSort"
+  },
+  "rabin-karp-algorithm-for-pattern-searching": {
+    "parameters": [
+      {
+        "name": "txt",
+        "type": "string"
+      },
+      {
+        "name": "pat",
+        "type": "string"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "search"
+  },
+  "radix-sort": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "radixSort"
+  },
+  "range-minimum-query": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "rangeMinimumQuery"
+  },
+  "range-sum-query-immutable": {
+    "isClass": true,
+    "methods": [
+      {
+        "name": "sumRange",
+        "parameters": [
+          {
+            "name": "left",
+            "type": "int"
+          },
+          {
+            "name": "right",
+            "type": "int"
+          }
+        ],
+        "returnType": "int"
+      }
+    ],
+    "className": "NumArray",
+    "constructorParams": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "range-sum-query-mutable": {
+    "isClass": true,
+    "methods": [
+      {
+        "name": "update",
+        "parameters": [
+          {
+            "name": "index",
+            "type": "int"
+          },
+          {
+            "name": "val",
+            "type": "int"
+          }
+        ],
+        "returnType": "void"
+      },
+      {
+        "name": "sumRange",
+        "parameters": [
+          {
+            "name": "left",
+            "type": "int"
+          },
+          {
+            "name": "right",
+            "type": "int"
+          }
+        ],
+        "returnType": "int"
+      }
+    ],
+    "className": "NumArray",
+    "constructorParams": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "rat-in-a-maze-problem": {
+    "functionName": "findPath",
+    "returnType": "string[]",
+    "parameters": [
+      {
+        "name": "m",
+        "type": "int[][]"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "reach-a-given-score": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "waysToScore"
+  },
+  "remove-all-adjacent-duplicates-in-string": {
+    "functionName": "removeDuplicates",
+    "returnType": "string",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "remove-duplicates-from-an-unsorted-linked-list": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "removeDuplicatesFromAnUnsorted"
+  },
+  "remove-invalid-parentheses": {
+    "functionName": "removeInvalidParentheses",
+    "returnType": "string[]",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "remove-nth-node-from-end-of-list": {
+    "functionName": "removeNthFromEnd",
+    "returnType": "ListNode",
+    "parameters": [
+      {
+        "name": "head",
+        "type": "ListNode"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "rearrange-a-given-linked-list-in-place": {
+    "parameters": [
+      {
+        "name": "list",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "reorderList"
+  },
+  "reorder-list": {
+    "functionName": "reorderList",
+    "returnType": "void",
+    "parameters": [
+      {
+        "name": "head",
+        "type": "ListNode"
+      }
+    ]
+  },
+  "rearrange-characters-string-such-that-no-two-adjacent-are-same": {
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ],
+    "returnType": "string",
+    "functionName": "reorganizeString"
+  },
+  "replace-every-element": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "replaceEveryElement"
+  },
+  "reverse-first-k-elements-of-queue": {
+    "parameters": [
+      {
+        "name": "q",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "modifyQueue"
+  },
+  "reverse-level-order-traversal": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "reverseLevelOrderTraversal"
+  },
+  "reverse-linked-list": {
+    "functionName": "reverseList",
+    "returnType": "ListNode",
+    "parameters": [
+      {
+        "name": "head",
+        "type": "ListNode"
+      }
+    ]
+  },
+  "reverse-string": {
+    "functionName": "reverseString",
+    "returnType": "void",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "any"
+      }
+    ]
+  },
+  "reverse-a-doubly-linked-list": {
+    "parameters": [
+      {
+        "name": "list",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "reverseDLL"
+  },
+  "right-view-of-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "rightViewOfBinaryTree"
+  },
+  "rotate-image": {
+    "functionName": "rotate",
+    "returnType": "void",
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "rotten-oranges": {
+    "functionName": "orangesRotting",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "grid",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "same-tree": {
+    "functionName": "isSameTree",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "p",
+        "type": "TreeNode"
+      },
+      {
+        "name": "q",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "searching-in-an-array-where-adjacent-differ-by-at-most-k": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "search"
+  },
+  "search-in-rotated-sorted-array": {
+    "functionName": "search",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      },
+      {
+        "name": "target",
+        "type": "int"
+      }
+    ]
+  },
+  "segregate-even-and-odd-elements-in-a-linked-list": {
+    "parameters": [
+      {
+        "name": "list",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "segregateEvenOdd"
+  },
+  "serialize-and-deserialize-binary-tree": {
+    "isClass": true,
+    "methods": [
+      {
+        "name": "serialize",
+        "parameters": [
+          {
+            "name": "root",
+            "type": "int"
+          }
+        ],
+        "returnType": "void"
+      },
+      {
+        "name": "deserialize",
+        "parameters": [
+          {
+            "name": "data",
+            "type": "int"
+          }
+        ],
+        "returnType": "void"
+      }
+    ],
+    "className": "TreeNode",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "int"
+      }
+    ],
+    "returnType": "void",
+    "functionName": "serialize",
+    "constructorParams": [
+      {
+        "name": "x",
+        "type": "int"
+      }
+    ]
+  },
+  "set-matrix-zeroes": {
+    "functionName": "setZeroes",
+    "returnType": "void",
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "set-mismatch": {
+    "functionName": "findErrorNums",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "sliding-window-maximum": {
+    "functionName": "maxSlidingWindow",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "smallest-window-in-a-string-containing-all-the-characters-of-another-string": {
+    "parameters": [
+      {
+        "name": "S",
+        "type": "string"
+      },
+      {
+        "name": "P",
+        "type": "string"
+      }
+    ],
+    "returnType": "string",
+    "functionName": "smallestWindow"
+  },
+  "snakes-and-ladders": {
+    "functionName": "snakesAndLadders",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "board",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "sort-biotonic-doubly-linked-lists": {
+    "parameters": [
+      {
+        "name": "list",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "sortBiotonic"
+  },
+  "sort-a-linked-list-of-0s-1s-or-2s": {
+    "parameters": [
+      {
+        "name": "list",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "sortList"
+  },
+  "sort-a-stack-using-recursion": {
+    "parameters": [
+      {
+        "name": "stack",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "sortStack"
+  },
+  "space-optimization-using-bit-manipulations": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "sameParity"
+  },
+  "spiral-matrix": {
+    "functionName": "spiralOrder",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "stack-permutations-check-if-an-array-is-stack-permutation-of-other": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "stackPermutationsCheckIfAnArrayIsStackPermutationOfOther"
+  },
+  "steps-by-knight": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "x1",
+        "type": "int"
+      },
+      {
+        "name": "y1",
+        "type": "int"
+      },
+      {
+        "name": "x2",
+        "type": "int"
+      },
+      {
+        "name": "y2",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minSteps"
+  },
+  "subarray-sums-divisible-by-k": {
+    "functionName": "subarraysDivByK",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "subset-sum": {
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "number[]"
+      },
+      {
+        "name": "target",
+        "type": "int"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "isSubsetSum"
+  },
+  "subsets": {
+    "functionName": "subsets",
+    "returnType": "int[][]",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      }
+    ]
+  },
+  "subtract-two-numbers-represented-as-linked-lists": {
+    "functionName": "subLinkedList",
+    "returnType": "ListNode",
+    "parameters": [
+      {
+        "name": "l1",
+        "type": "ListNode"
+      },
+      {
+        "name": "l2",
+        "type": "ListNode"
+      }
+    ]
+  },
+  "subtree-of-another-tree": {
+    "functionName": "isSubtree",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      },
+      {
+        "name": "subRoot",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "sudoku-solver": {
+    "functionName": "solveSudoku",
+    "returnType": "void",
+    "parameters": [
+      {
+        "name": "board",
+        "type": "string[][]"
+      }
+    ]
+  },
+  "sum-of-two-numbers": {
+    "parameters": [
+      {
+        "name": "a",
+        "type": "int"
+      },
+      {
+        "name": "b",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "sum"
+  },
+  "given-a-matrix-of-o-and-x-replace-o-with-x-if-surrounded-by-x": {
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "surroundedRegions"
+  },
+  "the-celebrity-problem-151": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "knows",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "celebrity"
+  },
+  "the-celebrity-problem": {
+    "functionName": "celebrity",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "M",
+        "type": "int[][]"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "top-k-frequent-elements": {
+    "functionName": "topKFrequent",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ]
+  },
+  "top-view-of-binary-tree": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "topViewOfBinaryTree"
+  },
+  "total-number-spanning-trees-graph": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "countSpanningTrees"
+  },
+  "tournament-tree-and-binary-heap": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "tournamentTreeAndBinaryHeap"
+  },
+  "transform-one-string-to-another-using-minimum-number-of-given-operation": {
+    "parameters": [
+      {
+        "name": "A",
+        "type": "string"
+      },
+      {
+        "name": "B",
+        "type": "string"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "minOps"
+  },
+  "transform-to-sum-tree": {
+    "parameters": [
+      {
+        "name": "tree",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "toSumTree"
+  },
+  "trapping-rain-water": {
+    "functionName": "trap",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "height",
+        "type": "int[]"
+      }
+    ]
+  },
+  "travelling-salesman": {
+    "functionName": "totalCost",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "cost",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "tug-of-war": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "tugOfWar"
+  },
+  "two-clique-problem": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "canBeDividedIntoTwoCliques"
+  },
+  "two-sum": {
+    "functionName": "twoSum",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "nums",
+        "type": "int[]"
+      },
+      {
+        "name": "target",
+        "type": "int"
+      }
+    ]
+  },
+  "unique-paths": {
+    "functionName": "uniquePaths",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "m",
+        "type": "int"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      }
+    ]
+  },
+  "valid-anagram": {
+    "functionName": "isAnagram",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      },
+      {
+        "name": "t",
+        "type": "string"
+      }
+    ]
+  },
+  "valid-palindrome": {
+    "functionName": "isPalindrome",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "valid-parentheses": {
+    "functionName": "isValid",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ]
+  },
+  "valid-sudoku": {
+    "functionName": "isValidSudoku",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "board",
+        "type": "string[][]"
+      }
+    ]
+  },
+  "validate-binary-search-tree": {
+    "functionName": "isValidBST",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "root",
+        "type": "TreeNode"
+      }
+    ]
+  },
+  "vertex-cover": {
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "edges",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "vertexCover"
+  },
+  "water-jug": {
+    "parameters": [
+      {
+        "name": "m",
+        "type": "int"
+      },
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "d",
+        "type": "int"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "canMeasureWater"
+  },
+  "water-jug-2": {
+    "parameters": [
+      {
+        "name": "jug1Capacity",
+        "type": "int"
+      },
+      {
+        "name": "jug2Capacity",
+        "type": "int"
+      },
+      {
+        "name": "targetCapacity",
+        "type": "int"
+      }
+    ],
+    "returnType": "boolean",
+    "functionName": "canMeasureWater"
+  },
+  "weighted-job-scheduling": {
+    "parameters": [
+      {
+        "name": "startTime",
+        "type": "number[]"
+      },
+      {
+        "name": "endTime",
+        "type": "number[]"
+      },
+      {
+        "name": "profit",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "jobScheduling"
+  },
+  "wildcard-string-matching": {
+    "functionName": "match",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "wild",
+        "type": "string"
+      },
+      {
+        "name": "pattern",
+        "type": "string"
+      }
+    ]
+  },
+  "word-break": {
+    "functionName": "wordBreak",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      },
+      {
+        "name": "wordDict",
+        "type": "string[]"
+      }
+    ]
+  },
+  "word-break-problem-using-backtracking": {
+    "parameters": [
+      {
+        "name": "s",
+        "type": "string"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "wordBreak"
+  },
+  "word-break-problem-trie-solution": {
+    "parameters": [
+      {
+        "name": "arr",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "wordBreakProblemTrieSolution"
+  },
+  "word-ladder": {
+    "functionName": "ladderLength",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "beginWord",
+        "type": "string"
+      },
+      {
+        "name": "endWord",
+        "type": "string"
+      },
+      {
+        "name": "wordList",
+        "type": "string[]"
+      }
+    ]
+  },
+  "word-search": {
+    "functionName": "exist",
+    "returnType": "boolean",
+    "parameters": [
+      {
+        "name": "board",
+        "type": "string[][]"
+      },
+      {
+        "name": "word",
+        "type": "string"
+      }
+    ]
+  },
+  "word-wrap": {
+    "parameters": [
+      {
+        "name": "words",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "wordWrap"
+  },
+  "word-wrap-352": {
+    "parameters": [
+      {
+        "name": "words",
+        "type": "number[]"
+      },
+      {
+        "name": "k",
+        "type": "int"
+      }
+    ],
+    "returnType": "int",
+    "functionName": "wordWrap"
+  },
+  "zigzag-tree-traversal": {
+    "parameters": [
+      {
+        "name": "root",
+        "type": "number[]"
+      }
+    ],
+    "returnType": "number[]",
+    "functionName": "zigzagTreeTraversal"
+  },
+  "zigzag-or-diagonal-traversal-of-matrix": {
+    "functionName": "diagonalOrder",
+    "returnType": "int[]",
+    "parameters": [
+      {
+        "name": "matrix",
+        "type": "int[][]"
+      }
+    ]
+  },
+  "ncr": {
+    "functionName": "nCr",
+    "returnType": "int",
+    "parameters": [
+      {
+        "name": "n",
+        "type": "int"
+      },
+      {
+        "name": "r",
+        "type": "int"
+      }
+    ]
+  }
+}

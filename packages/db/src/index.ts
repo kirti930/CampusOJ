@@ -5,9 +5,12 @@ declare global {
   var __prisma: PrismaClient | undefined;
 }
 
-let dbUrl = process.env.DATABASE_URL || "";
+let dbUrl = process.env.DATABASE_URL_POOLED || process.env.DATABASE_URL || "";
 if (dbUrl && !dbUrl.includes("pool_timeout")) {
-  dbUrl += (dbUrl.includes("?") ? "&" : "?") + "connect_timeout=30&pool_timeout=30";
+  dbUrl += (dbUrl.includes("?") ? "&" : "?") + "connect_timeout=15&pool_timeout=15";
+}
+if (dbUrl && dbUrl.includes("-pooler.") && !dbUrl.includes("pgbouncer=true")) {
+  dbUrl += "&pgbouncer=true";
 }
 
 // Reuse the client in development to avoid exhausting DB connections on HMR

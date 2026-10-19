@@ -16,11 +16,29 @@ function isPrivileged(role: Role): boolean {
   return PRIVILEGE_ROLES.includes(role);
 }
 
+// ─── Fast In-Memory Cache ─────────────────────────────────────────────────────
+
+interface ContestCacheEntry<T> {
+  data: T;
+  expiresAt: number;
+}
+const contestListCache = new Map<string, ContestCacheEntry<any>>();
+
+export function invalidateContestCaches() {
+  contestListCache.clear();
+}
+
 // ─── List Contests ────────────────────────────────────────────────────────────
 
 export async function listContests(query: ContestListQuery) {
   const { status, page, limit } = query;
   const skip = (page - 1) * limit;
+
+  const cacheKey = JSON.stringify({ status, page, limit });
+  const cached = contestListCache.get(cacheKey);
+  if (cached && cached.expiresAt > Date.now()) {
+    return cached.data;
+  }
 
   let dbStatus: any = status;
   if (status === "UPCOMING") {
@@ -29,7 +47,7 @@ export async function listContests(query: ContestListQuery) {
 
   const where = dbStatus ? { status: dbStatus } : {};
 
-  const [contests, total] = await prisma.$transaction([
+  const [contests, total] = await Promise.all([
     prisma.contest.findMany({
       where,
       skip,
@@ -43,7 +61,7 @@ export async function listContests(query: ContestListQuery) {
     prisma.contest.count({ where }),
   ]);
 
-  return {
+  const result = {
     data: contests.map((c) => ({
       id: c.id,
       title: c.title,
@@ -68,6 +86,9 @@ export async function listContests(query: ContestListQuery) {
       totalPages: Math.ceil(total / limit),
     },
   };
+
+  contestListCache.set(cacheKey, { data: result, expiresAt: Date.now() + 30_000 });
+  return result;
 }
 
 // ─── Get Contest Detail ───────────────────────────────────────────────────────
@@ -168,6 +189,7 @@ export async function createContest(
     },
   });
 
+  invalidateContestCaches();
   return contest;
 }
 
@@ -204,7 +226,9 @@ export async function updateContest(
   if (input.rules !== undefined) data.rules = input.rules;
   if (input.status !== undefined) data.status = input.status;
 
-  return prisma.contest.update({ where: { id: contestId }, data });
+  const result = await prisma.contest.update({ where: { id: contestId }, data });
+  invalidateContestCaches();
+  return result;
 }
 
 // ─── Register for Contest ─────────────────────────────────────────────────────
@@ -222,9 +246,11 @@ export async function registerForContest(contestId: string, userId: string) {
   });
   if (existing) throw new AppError("Already registered for this contest", 409);
 
-  return prisma.contestParticipant.create({
+  const result = await prisma.contestParticipant.create({
     data: { contestId, userId },
   });
+  invalidateContestCaches();
+  return result;
 }
 
 // ─── Attach Problem to Contest ────────────────────────────────────────────────
@@ -250,7 +276,7 @@ export async function attachProblemToContest(
   });
   if (existing) throw new AppError("Problem already attached to this contest", 409);
 
-  return prisma.contestProblem.create({
+  const result = await prisma.contestProblem.create({
     data: {
       contestId,
       problemId: input.problemId,
@@ -258,4 +284,6 @@ export async function attachProblemToContest(
       points: input.points,
     },
   });
+  invalidateContestCaches();
+  return result;
 }

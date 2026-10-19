@@ -1,29 +1,40 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { ProtectedRoute } from "./components/guards/ProtectedRoute";
 import { PublicOnlyRoute } from "./components/guards/PublicOnlyRoute";
 import { RoleRoute } from "./components/guards/RoleRoute";
 
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import DashboardPage from "./pages/DashboardPage";
-import UnauthorizedPage from "./pages/UnauthorizedPage";
+const LoginPage = lazy(() => import("./pages/LoginPage"));
+const RegisterPage = lazy(() => import("./pages/RegisterPage"));
+const DashboardPage = lazy(() => import("./pages/DashboardPage"));
+const UnauthorizedPage = lazy(() => import("./pages/UnauthorizedPage"));
 
 // Phase 3 Contest & Problem Features
-import ContestListPage from "./features/contests/ContestListPage";
-import ContestLobbyPage from "./features/contests/ContestLobbyPage";
-import CreateContestPage from "./features/contests/CreateContestPage";
-import ContestMonitorPage from "./features/contests/ContestMonitorPage";
-import ProblemListPage from "./features/problems/ProblemListPage";
-import ProblemDetailPage from "./features/problems/ProblemDetailPage";
-import CreateProblemPage from "./features/problems/CreateProblemPage";
-import LeaderboardPage from "./features/leaderboard/LeaderboardPage";
+const ContestListPage = lazy(() => import("./features/contests/ContestListPage"));
+const ContestLobbyPage = lazy(() => import("./features/contests/ContestLobbyPage"));
+const CreateContestPage = lazy(() => import("./features/contests/CreateContestPage"));
+const ContestMonitorPage = lazy(() => import("./features/contests/ContestMonitorPage"));
+const ProblemListPage = lazy(() => import("./features/problems/ProblemListPage"));
+const ProblemDetailPage = lazy(() => import("./features/problems/ProblemDetailPage"));
+const CreateProblemPage = lazy(() => import("./features/problems/CreateProblemPage"));
+const LeaderboardPage = lazy(() => import("./features/leaderboard/LeaderboardPage"));
+
+function PageLoadingFallback() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-950">
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-600 mb-2" />
+      <span className="text-xs text-slate-400 font-medium tracking-wide">Loading...</span>
+    </div>
+  );
+}
 
 export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <Routes>
+        <Suspense fallback={<PageLoadingFallback />}>
+          <Routes>
           {/* ── Root redirect ── */}
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
@@ -94,6 +105,7 @@ export default function App() {
             }
           />
         </Routes>
+        </Suspense>
       </AuthProvider>
     </BrowserRouter>
   );

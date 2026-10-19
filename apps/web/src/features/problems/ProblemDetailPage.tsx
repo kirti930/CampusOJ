@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import api from "../../lib/api";
 import { useAuth } from "../../context/AuthContext";
 import { Navbar } from "../../components/layout/Navbar";
@@ -75,9 +76,7 @@ export default function ProblemDetailPage() {
   const activeProblemId = problemId ?? rootProblemId;
 
   const { user } = useAuth();
-  const [problem, setProblem] = useState<IProblemDetail | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [actionError, setActionError] = useState<string | null>(null);
 
   // Editor State
   const [language, setLanguage] = useState<string>("cpp");
@@ -109,50 +108,50 @@ export default function ProblemDetailPage() {
     user?.role === "ADMIN" ||
     user?.role === "SUPER_ADMIN";
 
-  const fetchProblem = useCallback(async () => {
-    if (!activeProblemId) return;
-    setIsLoading(true);
-    setError(null);
-    try {
+  const {
+    data: problem,
+    isLoading,
+    error: queryError,
+    refetch: fetchProblem,
+  } = useQuery({
+    queryKey: ["problem", activeProblemId],
+    queryFn: async () => {
       const res = await api.get<{ success: boolean; data: IProblemDetail }>(
         `/problems/${activeProblemId}`
       );
-      setProblem(res.data.data);
+      return res.data.data;
+    },
+    enabled: !!activeProblemId,
+    staleTime: 1000 * 60 * 5, // 5 minutes cache
+  });
 
-      // Set default language from allowed languages
-      if (res.data.data.allowedLanguages.length > 0) {
-        const defaultLang = res.data.data.allowedLanguages.includes("cpp")
-          ? "cpp"
-          : res.data.data.allowedLanguages[0];
-        setLanguage(defaultLang);
-        const starter =
-          getProblemStarterCode(res.data.data, defaultLang) ||
-          STARTER_TEMPLATES[defaultLang] ||
-          "";
-        setCode(starter);
-      }
-
-      // Prefill custom input with first sample testcase
-      const firstSample = res.data.data.testCases.find((tc) => tc.isSample);
-      if (firstSample && firstSample.input) {
-        setCustomInput(formatTestCaseInput(firstSample.input));
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to load problem");
-    } finally {
-      setIsLoading(false);
-    }
-  }, [activeProblemId]);
+  const error = actionError || (queryError instanceof Error ? queryError.message : null);
 
   useEffect(() => {
-    fetchProblem();
-  }, [fetchProblem]);
+    if (!problem) return;
+    if (problem.allowedLanguages.length > 0) {
+      const defaultLang = problem.allowedLanguages.includes("cpp")
+        ? "cpp"
+        : problem.allowedLanguages[0];
+      setLanguage(defaultLang);
+      const starter =
+        getProblemStarterCode(problem, defaultLang) ||
+        STARTER_TEMPLATES[defaultLang] ||
+        "";
+      setCode(starter);
+    }
+
+    const firstSample = problem.testCases?.find((tc) => tc.isSample);
+    if (firstSample && firstSample.input) {
+      setCustomInput(formatTestCaseInput(firstSample.input));
+    }
+  }, [problem]);
 
   // ─── Run Code (POST /submissions/run) ───────────────────────────────────────
   const handleRunCode = async () => {
     if (!activeProblemId) return;
     setIsRunning(true);
-    setError(null);
+    setActionError(null);
     setActiveTab("RUN");
 
     try {
@@ -220,7 +219,7 @@ export default function ProblemDetailPage() {
         compileOutput: rawCompileOutput ? String(rawCompileOutput) : undefined,
       });
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Code run failed");
+      setActionError(err instanceof Error ? err.message : "Code run failed");
     } finally {
       setIsRunning(false);
     }
@@ -230,7 +229,7 @@ export default function ProblemDetailPage() {
   const handleSubmitCode = async () => {
     if (!activeProblemId) return;
     setIsSubmitting(true);
-    setError(null);
+    setActionError(null);
     setActiveTab("SUBMIT");
 
     try {
@@ -255,7 +254,7 @@ export default function ProblemDetailPage() {
       // Poll for completion
       pollSubmission(submissionId);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Submission failed");
+      setActionError(err instanceof Error ? err.message : "Submission failed");
       setIsSubmitting(false);
     }
   };
@@ -349,17 +348,6 @@ export default function ProblemDetailPage() {
   }
 
   if (!problem) return null;
-
-  if (isLoading || !problem) {
-    return (
-      <div className="min-h-screen flex flex-col bg-slate-100 dark:bg-slate-950">
-        <Navbar />
-        <div className="flex-1 flex items-center justify-center">
-          <RotateCw className="h-6 w-6 animate-spin text-brand-600" />
-        </div>
-      </div>
-    );
-  }
 
   const sampleTestCases = problem.testCases?.filter((tc) => tc.isSample && !tc.isHidden && tc.input) || [];
 

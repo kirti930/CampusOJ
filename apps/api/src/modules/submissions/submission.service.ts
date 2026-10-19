@@ -294,7 +294,7 @@ export async function listSubmissions(
     where.userId = userId;
   }
 
-  const [submissions, total] = await prisma.$transaction([
+  const [submissions, total] = await Promise.all([
     prisma.submission.findMany({
       where,
       skip,

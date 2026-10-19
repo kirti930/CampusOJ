@@ -1,5 +1,6 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import api from "../../lib/api";
 import { useAuth } from "../../context/AuthContext";
 import { AppLayout } from "../../components/layout/Navbar";
@@ -26,10 +27,8 @@ interface ContestListItem extends IContest {
 
 export default function ContestListPage() {
   const { user } = useAuth();
-  const [contests, setContests] = useState<ContestListItem[]>([]);
   const [activeTab, setActiveTab] = useState<TabOption>("LIVE");
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [registerError, setRegisterError] = useState<string | null>(null);
   const [registeringId, setRegisteringId] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
@@ -38,45 +37,37 @@ export default function ContestListPage() {
     user?.role === "ADMIN" ||
     user?.role === "SUPER_ADMIN";
 
-  const fetchContests = useCallback(async () => {
-    setIsLoading(true);
-    setError(null);
-    try {
+  const {
+    data: contests = [],
+    isLoading,
+    error: queryError,
+    refetch: fetchContests,
+  } = useQuery({
+    queryKey: ["contests"],
+    queryFn: async () => {
       const res = await api.get<{
         success: boolean;
         data: ContestListItem[];
       }>("/contests", {
         params: { limit: 50 },
       });
-      setContests(res.data.data);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to load contests");
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
+      return res.data.data;
+    },
+    staleTime: 1000 * 60 * 2, // 2 minutes fresh cache
+  });
 
-  useEffect(() => {
-    fetchContests();
-  }, [fetchContests]);
+  const error = registerError || (queryError instanceof Error ? queryError.message : null);
 
   const handleRegister = async (contestId: string) => {
     setRegisteringId(contestId);
-    setError(null);
+    setRegisterError(null);
     setSuccessMessage(null);
     try {
       await api.post(`/contests/${contestId}/register`);
       setSuccessMessage("You have successfully registered for the contest!");
-      // Mark as registered in local state
-      setContests((prev) =>
-        prev.map((c) =>
-          c.id === contestId
-            ? { ...c, isRegistered: true, participantCount: c.participantCount + 1 }
-            : c
-        )
-      );
+      fetchContests();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to register");
+      setRegisterError(err instanceof Error ? err.message : "Failed to register");
     } finally {
       setRegisteringId(null);
     }

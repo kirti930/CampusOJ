@@ -121,16 +121,32 @@ app.use(
   ) => {
     console.error("[ERROR]", err.message, err.stack);
 
-    if (err instanceof AppError && err.isOperational) {
-      res.status(err.statusCode).json({
+    const isOperational =
+      (err instanceof AppError && err.isOperational) ||
+      (err as any).isOperational === true;
+    const statusCode =
+      (err as any).statusCode ??
+      (err as { status?: number }).status ??
+      (isOperational ? 400 : 500);
+
+    if (isOperational) {
+      res.status(statusCode).json({
         success: false,
         error: err.message,
       });
       return;
     }
 
+    // Special handling for Prisma DB connection errors
+    if (err.name === "PrismaClientInitializationError") {
+      res.status(503).json({
+        success: false,
+        error: "Database is temporarily unavailable or warming up. Please try again in a few seconds.",
+      });
+      return;
+    }
+
     // Unhandled / programmer errors — hide details in production
-    const statusCode = (err as { status?: number }).status ?? 500;
     res.status(statusCode).json({
       success: false,
       error:

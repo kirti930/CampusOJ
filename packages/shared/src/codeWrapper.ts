@@ -844,6 +844,13 @@ ${paramParsers.join("\n")}
                 print(json.dumps(res))
             else:
                 print(res)
+        elif ${paramsList.length} > 0:
+            if isinstance(arg_0, (list, tuple, dict)):
+                print(json.dumps(arg_0))
+            elif isinstance(arg_0, bool):
+                print(str(arg_0).lower())
+            elif arg_0 is not None:
+                print(arg_0)
 `;
   }
 
@@ -921,7 +928,46 @@ ${paramParsers.join("\n")}
     } else if (retType === "boolean") {
       printLogic = `    cout << (result ? "true" : "false") << "\\n";`;
     } else if (retType === "void") {
-      printLogic = ``;
+      if (paramsList.length > 0) {
+        const p0 = paramsList[0];
+        if (
+          p0.type === "number[]" ||
+          p0.type === "int[]" ||
+          p0.type === "List<Integer>"
+        ) {
+          printLogic = `    cout << "[";
+    for (size_t i = 0; i < arg_0.size(); ++i) {
+        if (i > 0) cout << ",";
+        cout << arg_0[i];
+    }
+    cout << "]\\n";`;
+        } else if (
+          p0.type === "number[][]" ||
+          p0.type === "int[][]" ||
+          p0.type === "List<List<Integer>>"
+        ) {
+          printLogic = `    cout << "[";
+    for (size_t i = 0; i < arg_0.size(); ++i) {
+        if (i > 0) cout << ",";
+        cout << "[";
+        for (size_t j = 0; j < arg_0[i].size(); ++j) {
+            if (j > 0) cout << ",";
+            cout << arg_0[i][j];
+        }
+        cout << "]";
+    }
+    cout << "]\\n";`;
+        } else if (p0.type === "string[]") {
+          printLogic = `    cout << "[";
+    for (size_t i = 0; i < arg_0.size(); ++i) {
+        if (i > 0) cout << ",";
+        cout << "\\"" << arg_0[i] << "\\"";
+    }
+    cout << "]\\n";`;
+        } else {
+          printLogic = `    cout << arg_0 << "\\n";`;
+        }
+      }
     } else {
       printLogic = `    cout << result << "\\n";`;
     }
@@ -1085,7 +1131,21 @@ ${printLogic}
     } else if (retType === "List<Integer>" || retType === "List<List<Integer>>") {
       printLogic = `            System.out.println(res);`;
     } else if (retType === "void") {
-      printLogic = ``;
+      if (paramsList.length > 0) {
+        const p0 = paramsList[0];
+        if (p0.type === "number[]" || p0.type === "int[]") {
+          printLogic = `            if (arg_0 != null) {
+                System.out.print("[");
+                for (int i = 0; i < arg_0.length; i++) {
+                    if (i > 0) System.out.print(",");
+                    System.out.print(arg_0[i]);
+                }
+                System.out.println("]");
+            }`;
+        } else {
+          printLogic = `            System.out.println(arg_0);`;
+        }
+      }
     } else {
       printLogic = `            System.out.println(res);`;
     }

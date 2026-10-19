@@ -17,6 +17,7 @@ export default function LoginPage() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm<LoginInput>({
     resolver: zodResolver(LoginSchema),
@@ -85,6 +86,45 @@ export default function LoginPage() {
             Create one
           </Link>
         </p>
+
+        {/* Quick Demo Accounts */}
+        <div className="mt-6 pt-5 border-t border-gray-100">
+          <p className="text-xs text-gray-500 font-medium mb-2">
+            Demo Accounts (password: <code className="text-brand-600 bg-gray-100 px-1 py-0.5 rounded text-[11px]">Password123!</code>):
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setValue("email", "student@campusoj.edu", { shouldValidate: true });
+                setValue("password", "Password123!", { shouldValidate: true });
+              }}
+              className="text-xs bg-gray-100 hover:bg-brand-50 hover:text-brand-700 text-gray-700 px-2.5 py-1 rounded-md border border-gray-200 transition-colors"
+            >
+              🎓 Student
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setValue("email", "faculty@campusoj.edu", { shouldValidate: true });
+                setValue("password", "Password123!", { shouldValidate: true });
+              }}
+              className="text-xs bg-gray-100 hover:bg-brand-50 hover:text-brand-700 text-gray-700 px-2.5 py-1 rounded-md border border-gray-200 transition-colors"
+            >
+              👨‍🏫 Faculty
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setValue("email", "admin@campusoj.edu", { shouldValidate: true });
+                setValue("password", "Password123!", { shouldValidate: true });
+              }}
+              className="text-xs bg-gray-100 hover:bg-brand-50 hover:text-brand-700 text-gray-700 px-2.5 py-1 rounded-md border border-gray-200 transition-colors"
+            >
+              🛡️ Admin
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

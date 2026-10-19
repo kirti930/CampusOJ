@@ -1,7 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import Editor from "@monaco-editor/react";
+import Editor, { loader } from "@monaco-editor/react";
+import * as monaco from "monaco-editor";
 import { STARTER_TEMPLATES, MONACO_LANGUAGES } from "./starterTemplates";
 import { RotateCcw, Check, Sparkles, Code2 } from "lucide-react";
+
+// Configure @monaco-editor/react to use local package instead of loading from external CDN
+loader.config({ monaco });
 
 interface CodeEditorProps {
   problemId: string;
@@ -152,6 +156,12 @@ export function CodeEditor({
           theme="vs-dark"
           value={value}
           onChange={handleEditorChange}
+          loading={
+            <div className="flex flex-col items-center justify-center h-full gap-2 text-slate-400 text-xs bg-[#1e1e1e]">
+              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-brand-500" />
+              <span>Initializing editor...</span>
+            </div>
+          }
           options={{
             fontSize,
             fontFamily: "'Fira Code', 'Cascadia Code', Menlo, Monaco, monospace",

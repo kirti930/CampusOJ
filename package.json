@@ -10,6 +10,9 @@
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "dev": "npm run dev --workspaces --if-present",
+    "dev:api": "npm run dev --workspace=@campusoj/api",
+    "dev:web": "npm run dev --workspace=@campusoj/web",
+    "dev:worker": "npm run dev --workspace=@campusoj/judge-worker",
     "lint": "npm run lint --workspaces --if-present",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "db:generate": "npm run db:generate --workspace=packages/db",

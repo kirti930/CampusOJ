@@ -1,5 +1,6 @@
-import { useEffect, useState, useMemo, useCallback } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import { useAuth } from "../context/AuthContext";
 import { AppLayout } from "../components/layout/Navbar";
 import { Button } from "../components/ui/FormElements";
@@ -57,18 +58,19 @@ interface ContestItem {
 export default function DashboardPage() {
   const { user } = useAuth();
 
-  const [submissions, setSubmissions] = useState<UserSubmission[]>([]);
-  const [contests, setContests] = useState<ContestItem[]>([]);
-  const [loading, setLoading] = useState(true);
-
   const isPrivileged =
     user?.role === Role.FACULTY ||
     user?.role === Role.ADMIN ||
     user?.role === Role.SUPER_ADMIN;
 
-  const loadUserData = useCallback(async () => {
-    if (!user) return;
-    try {
+  const {
+    data: dashboardData,
+    isLoading: loading,
+    refetch: loadUserData,
+  } = useQuery({
+    queryKey: ["dashboard", user?.id],
+    queryFn: async () => {
+      if (!user) return { submissions: [], contests: [] };
       const [subsRes, contestsRes] = await Promise.all([
         api.get<{ success: boolean; data: UserSubmission[] }>(
           `/submissions?userId=${user.id}&limit=50`
@@ -77,19 +79,23 @@ export default function DashboardPage() {
           `/contests?limit=10`
         ),
       ]);
+      return {
+        submissions: subsRes.data.data || [],
+        contests: contestsRes.data.data || [],
+      };
+    },
+    enabled: !!user,
+    staleTime: 1000 * 60 * 2, // 2 minutes fresh cache
+  });
 
-      setSubmissions(subsRes.data.data || []);
-      setContests(contestsRes.data.data || []);
-    } catch (err) {
-      console.error("Failed to load dashboard data:", err);
-    } finally {
-      setLoading(false);
-    }
-  }, [user]);
-
+  const [submissions, setSubmissions] = useState<UserSubmission[]>([]);
   useEffect(() => {
-    loadUserData();
-  }, [loadUserData]);
+    if (dashboardData?.submissions) {
+      setSubmissions(dashboardData.submissions);
+    }
+  }, [dashboardData?.submissions]);
+
+  const contests = dashboardData?.contests ?? [];
 
   // Real-time listener for user submissions
   useEffect(() => {

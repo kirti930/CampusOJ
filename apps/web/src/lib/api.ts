@@ -24,11 +24,30 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use(
   (res) => res,
   (err) => {
-    const message =
+    let message =
       err.response?.data?.error ??
-      err.response?.data?.message ??
-      err.message ??
-      "An unexpected error occurred";
+      err.response?.data?.message;
+
+    if (!message) {
+      if (
+        err.code === "ERR_NETWORK" ||
+        err.code === "ECONNREFUSED" ||
+        [502, 503, 504].includes(err.response?.status)
+      ) {
+        message =
+          "Backend API server is not running or unreachable. Please start it with 'npm run dev --workspace=@campusoj/api'.";
+      } else if (
+        err.response?.status === 500 &&
+        typeof err.response?.data === "string" &&
+        (err.response.data.includes("ECONNREFUSED") || err.response.data.includes("proxy"))
+      ) {
+        message =
+          "Backend API connection refused on port 5000. Please ensure the API is running (npm run dev --workspace=@campusoj/api).";
+      } else {
+        message = err.message ?? "An unexpected error occurred";
+      }
+    }
+
     return Promise.reject(new Error(message));
   }
 );

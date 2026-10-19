@@ -1,5 +1,6 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import api from "../../lib/api";
 import { useAuth } from "../../context/AuthContext";
 import { AppLayout } from "../../components/layout/Navbar";
@@ -23,12 +24,9 @@ interface ProblemListItem extends IProblem {
 
 export default function ProblemListPage() {
   const { user } = useAuth();
-  const [problems, setProblems] = useState<ProblemListItem[]>([]);
   const [search, setSearch] = useState("");
   const [difficulty, setDifficulty] = useState<string>("");
   const [selectedTag, setSelectedTag] = useState<string>("");
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   const isPrivileged =
     user?.role === "FACULTY" ||
@@ -44,10 +42,13 @@ export default function ProblemListPage() {
     return () => clearTimeout(timer);
   }, [search]);
 
-  const fetchProblems = useCallback(async () => {
-    setIsLoading(true);
-    setError(null);
-    try {
+  const {
+    data: problems = [],
+    isLoading,
+    error: queryError,
+  } = useQuery({
+    queryKey: ["problems", difficulty, selectedTag.trim(), debouncedSearch.trim()],
+    queryFn: async () => {
       const params: Record<string, string | number> = { limit: 100 };
       if (difficulty) params.difficulty = difficulty;
       if (selectedTag.trim()) params.tag = selectedTag.trim();
@@ -57,17 +58,12 @@ export default function ProblemListPage() {
         success: boolean;
         data: ProblemListItem[];
       }>("/problems", { params });
-      setProblems(res.data.data);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to load problems");
-    } finally {
-      setIsLoading(false);
-    }
-  }, [difficulty, selectedTag, debouncedSearch]);
+      return res.data.data;
+    },
+    staleTime: 1000 * 60 * 3, // 3 minutes fresh cache
+  });
 
-  useEffect(() => {
-    fetchProblems();
-  }, [fetchProblems]);
+  const error = queryError instanceof Error ? queryError.message : null;
 
   // Instant reactive client-side filter
   const displayedProblems = useMemo(() => {
