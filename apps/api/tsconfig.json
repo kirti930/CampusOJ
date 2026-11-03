@@ -6,8 +6,16 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "noEmit": false,
-    "types": ["node"]
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ]
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
