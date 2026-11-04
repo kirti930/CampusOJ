@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
+    "start": "node apps/api/dist/server.js & node judge/worker/dist/worker.js",
     "dev": "npm run dev --workspaces --if-present",
     "dev:api": "npm run dev --workspace=@campusoj/api",
     "dev:web": "npm run dev --workspace=@campusoj/web",
